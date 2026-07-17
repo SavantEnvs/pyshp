@@ -1,0 +1,8 @@
+# Mayhem target: pyshp shapefile (.shp) parser, fuzzed via a native libFuzzer ELF
+# that embeds CPython and drives shapefile.Reader (see mayhem/fuzz_shp_driver.c).
+project: savantenvs/pyshp
+target: fuzz_shp
+
+cmds:
+  - cmd: /mayhem/fuzz_shp
+    libfuzzer: true

@@ -1,0 +1,24 @@
+# .dockerignore for the commit-image build.
+# Bake in the FULL repo (including .git history — the grader uses it), dropping only
+# local build artifacts and editor/OS cruft. Dev image, not minimal.
+
+# ── Build outputs / local cruft ──────────────────────────────────────────────
+build/
+dist/
+out/
+*.o
+*.a
+*.so
+*.dylib
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+
+# ── Editor / OS noise ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*~
