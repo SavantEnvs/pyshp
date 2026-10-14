@@ -1,0 +1,9 @@
+# Mayhem target (bug mining, BASE 8423899): pyshp shapefile (.shp) parser, fuzzed via a native libFuzzer ELF
+# that embeds CPython and drives shapefile.Reader (see mayhem/fuzz_shp_driver.c).
+# seed-from: https://app.mayhem.security/savantenvs/pyshp/fuzz-shp
+project: savantenvs/pyshp
+target: fuzz_shp-mined-8423899
+
+cmds:
+  - cmd: /mayhem/fuzz_shp
+    libfuzzer: true
